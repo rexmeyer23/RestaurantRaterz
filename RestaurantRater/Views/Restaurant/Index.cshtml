@@ -25,23 +25,24 @@
         <th></th>
     </tr>
     @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Address)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Rating)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new {id = item.RestaurantID})
-                        @Html.ActionLink("Details", "Details", new {id = item.RestaurantID})
-                        @Html.ActionLink("Delete", "Delete", new {id = item.RestaurantID})
-                    </td>
-                </tr>
-            }
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.RestaurantID })
+                @Html.ActionLink("Details", "Details", new { id = item.RestaurantID })
+                @Html.ActionLink("Delete", "Delete", new { id = item.RestaurantID })
+            </td>
+        </tr>
+    }
 </table>
-@*@Html.DisplayFor is an example of a Razor method*@
+@*@Html.DisplayFor is an example of a Razor method
+    This is what Razor methods are good for. We can write a method like we're used to in C# and then it gets rendered out as an HTML tag.*@
